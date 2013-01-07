@@ -1,5 +1,6 @@
 {
 	"name": "rough-dropdown",
+	"description": "Simple, clickable dropdowns"
 	"version": "1.0.0",
 	"author": "Oskar Rough Mosumgaard",
 	"main": ["dropdown.html", "dropdown.css", "dropdown.js"],
