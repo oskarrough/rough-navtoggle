@@ -1,0 +1,14 @@
+{
+	"name": "rough-dropdown",
+	"version": "1.0.0",
+	"author": "Oskar Rough Mosumgaard",
+	"main": ["dropdown.html", "dropdown.css", "dropdown.js"],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/oskarrough/rough-dropdown.git"
+	},
+	"licenses": [{
+		"type": "MIT",
+		"url": "http://opensource.org/licenses/MIT"
+	}]
+}
