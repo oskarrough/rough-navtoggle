@@ -3,7 +3,7 @@
 	"description": "Toggle a navigation with a button (useful for small screens)",
 	"version": "0.1.1",
 	"author": "Oskar Rough Mosumgaard",
-	"main": ["navigation-toggle.html", "navigation-toggle.css", "navigation-toggle.js"],
+	"main": ["navigation-toggle.html", "navigation-toggle.scss", "navigation-toggle.css", "navigation-toggle.js"],
 	"dependencies": {
 		"jquery": "*"
 	},
