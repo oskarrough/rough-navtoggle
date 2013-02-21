@@ -1,5 +1,9 @@
-rough-dropdown
+rough-navigation-toggle
 ==============
 
-Component for easy dropdowns with click/tap behaviour instead of hover.
+WORK IN PROGRESS
+
+Component for easy, togglable (is that a word?) navigation.
+For smaller screens you might want to hide your navigation behind a "Menu" button. This will help you.
+
 The CSS is divided into necessary and "makeup" styles.
