@@ -1,0 +1,110 @@
+/*
+	Rough Navigation Toggle
+	by Oskar Rough Mosumgaard
+	- use it as you like
+*/
+
+/* reset the list */
+.menu,
+.menu ul { padding: 0; list-style: none; }
+
+
+
+// Where to change into toggle
+$nav-toggle-breakpoint: (800/15)*1em;
+$primary-menu-breakpoint: (799/15)*1em;
+
+// Size of the toggle button
+$nav-toggle-size: 2;
+
+// Color
+$toggle-color: red;
+$toggle-line-color: #fff;
+
+
+.menu {
+	//@include transition(all 150ms);
+	-webkit-transition: all 150ms;
+	   -moz-transition: all 150ms;
+	    -ms-transition: all 150ms;
+	     -o-transition: all 150ms;
+	        transition: all 150ms;
+	
+	// Hide when too small
+	@media screen and (max-width: $primary-menu-breakpoint) {
+		max-height: 0;
+		overflow: hidden;
+		text-align: center;
+		background-color: #f2f2f2;
+		
+		li {
+			margin: 1em 0;	
+		}
+		a {
+			margin-right: auto;
+		}
+	}
+	
+	// show when activated with js
+	&.is-active {
+		max-height: 999px;
+	}
+}
+
+/* Navigation toggle button */
+.nav-toggle {
+	float: right;
+
+	cursor: pointer;
+	&:hover {
+		.nav-toggle__text {
+			text-decoration: underline;
+		}
+		.nav-toggle__box {
+			background-color: darken($toggle-color,10%);
+		}
+	}
+	/* Hide when screen is wide enough and for IE8 (no mq support) */
+	@media screen and (min-width: $nav-toggle-breakpoint) {
+		display: none;
+	}
+	.lt-ie9 & {
+		display: none;
+	}
+}
+.nav-toggle__text {
+	position: relative;
+	top: (9/15)*-1em;
+	margin-right: (2/15)*1em;
+	color: $toggle-color;
+}
+.nav-toggle__box {
+  	display: inline-block;
+  	font-size: 16px;
+	padding: (10 / 16) * 1em;
+	background-color: $toggle-color;
+	cursor: pointer;
+}
+.nav-toggle__icon {
+	-webkit-transition: all 200ms;
+	   -moz-transition: all 200ms;
+	    -ms-transition: all 200ms;
+	     -o-transition: all 200ms;
+	        transition: all 200ms;
+	float: right;
+	width: 1em;
+	height: ($nav-toggle-size / 16) * 1em;
+	border-top: (($nav-toggle-size * 3) / 16) * 1em double $toggle-line-color;
+	border-bottom: ($nav-toggle-size / 16) * 1em solid $toggle-line-color;
+}
+
+/* Navigation toggle active state */
+.nav-toggle.is-active .nav-toggle__icon {
+	//@include transform(rotate(90deg));
+	-webkit-transform: rotate(90deg);
+	   -moz-transform: rotate(90deg);
+	    -ms-transform: rotate(90deg);
+	     -o-transform: rotate(90deg);
+	        transform: rotate(90deg);
+}
+

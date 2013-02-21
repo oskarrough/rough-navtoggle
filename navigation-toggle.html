@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html class="no-js">
-<head>
-	<link rel="stylesheet" href="dropdown.css">
-	<title>Dropdowns</title>
-</head>
-<body>
+	<head>
+		<link rel="stylesheet" href="navigation-toggle.css">
+		<title>Rough Navigation Toggle</title>
+	</head>
+	<body>
 
-	<nav>
-		<ul>
+		<ul id="js-menu" class="menu">
 			<li><a href="#">Link</a></li>
 			<li><a href="#">Dropdown</a>
 				<ul>
@@ -25,11 +24,10 @@
 			</li>
 			<li><a href="#">Link</a></li>
 		</ul>
-	</nav>
 
-	<!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script> -->
-	<script src="../jquery/jquery.min.js"></script>
-	<script src="dropdown.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="components/jquery/jquery.min.js"><\/script>')</script>
+		<script src="navigation-toggle.js"></script>
 
-</body>
+	</body>
 </html>

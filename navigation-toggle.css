@@ -1,0 +1,77 @@
+/*
+	Rough Navigation Toggle
+	by Oskar Rough Mosumgaard
+	- use it as you like
+*/
+/* reset the list */
+.menu,
+.menu ul {
+  padding: 0;
+  list-style: none; }
+
+.menu {
+  -webkit-transition: all 150ms;
+  -moz-transition: all 150ms;
+  -ms-transition: all 150ms;
+  -o-transition: all 150ms;
+  transition: all 150ms; }
+  @media screen and (max-width: 53.26667em) {
+    .menu {
+      max-height: 0;
+      overflow: hidden;
+      text-align: center;
+      background-color: #f2f2f2; }
+      .menu li {
+        margin: 1em 0; }
+      .menu a {
+        margin-right: auto; } }
+  .menu.is-active {
+    max-height: 999px; }
+
+/* Navigation toggle button */
+.nav-toggle {
+  float: right;
+  cursor: pointer;
+  /* Hide when screen is wide enough and for IE8 (no mq support) */ }
+  .nav-toggle:hover .nav-toggle__text {
+    text-decoration: underline; }
+  .nav-toggle:hover .nav-toggle__box {
+    background-color: #cc0000; }
+  @media screen and (min-width: 53.33333em) {
+    .nav-toggle {
+      display: none; } }
+  .lt-ie9 .nav-toggle {
+    display: none; }
+
+.nav-toggle__text {
+  position: relative;
+  top: -0.6em;
+  margin-right: 0.13333em;
+  color: red; }
+
+.nav-toggle__box {
+  display: inline-block;
+  font-size: 16px;
+  padding: 0.625em;
+  background-color: red;
+  cursor: pointer; }
+
+.nav-toggle__icon {
+  -webkit-transition: all 200ms;
+  -moz-transition: all 200ms;
+  -ms-transition: all 200ms;
+  -o-transition: all 200ms;
+  transition: all 200ms;
+  float: right;
+  width: 1em;
+  height: 0.125em;
+  border-top: 0.375em double white;
+  border-bottom: 0.125em solid white; }
+
+/* Navigation toggle active state */
+.nav-toggle.is-active .nav-toggle__icon {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg); }

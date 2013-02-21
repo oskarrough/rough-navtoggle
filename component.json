@@ -1,12 +1,15 @@
 {
-	"name": "rough-dropdown",
-	"description": "Simple, clickable dropdowns"
-	"version": "0.1.0",
+	"name": "rough-navigation-toggle",
+	"description": "Toggle a navigation with a button (useful for small screens)",
+	"version": "0.1.1",
 	"author": "Oskar Rough Mosumgaard",
-	"main": ["dropdown.html", "dropdown.css", "dropdown.js"],
+	"main": ["navigation-toggle.html", "navigation-toggle.css", "navigation-toggle.js"],
+	"dependencies": {
+		"jquery": "*"
+	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/oskarrough/rough-dropdown.git"
+		"url": "https://github.com/oskarrough/rough-navigation-toggle.git"
 	},
 	"licenses": [{
 		"type": "MIT",
