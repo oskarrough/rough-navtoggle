@@ -29,10 +29,7 @@ $toggle-line-color: #fff;
 	    -ms-transition: all 150ms;
 	     -o-transition: all 150ms;
 	        transition: all 150ms;
-	-webkit-background-size: cover;
-	     -o-background-size: cover;
-	        background-size: cover;
-	
+
 	// Hide when too small
 	@media screen and (max-width: $navigation-primary-breakpoint) {
 		max-height: 0;
@@ -47,7 +44,7 @@ $toggle-line-color: #fff;
 			margin-right: auto;
 		}
 	}
-	
+
 	// show when activated with js
 	&.is-active {
 		max-height: 999px;
@@ -57,8 +54,8 @@ $toggle-line-color: #fff;
 /* Navigation toggle button */
 .navigation-toggle-button {
 	float: right;
-
 	cursor: pointer;
+	
 	&:hover {
 		.navigation-toggle-button__text {
 			text-decoration: underline;
@@ -89,16 +86,18 @@ $toggle-line-color: #fff;
 	cursor: pointer;
 }
 .navigation-toggle-button__icon {
-	-webkit-transition: all 200ms;
-	   -moz-transition: all 200ms;
-	    -ms-transition: all 200ms;
-	     -o-transition: all 200ms;
-	        transition: all 200ms;
+	box-sizing: content-box;
+	-moz-box-sizing: content-box;
 	float: right;
 	width: 1em;
 	height: ($navigation-toggle-size / 16) * 1em;
 	border-top: (($navigation-toggle-size * 3) / 16) * 1em double $toggle-line-color;
 	border-bottom: ($navigation-toggle-size / 16) * 1em solid $toggle-line-color;
+	-webkit-transition: all 200ms;
+	   -moz-transition: all 200ms;
+	    -ms-transition: all 200ms;
+	     -o-transition: all 200ms;
+	        transition: all 200ms;
 }
 
 /* Navigation toggle active state */
@@ -110,4 +109,3 @@ $toggle-line-color: #fff;
 	     -o-transform: rotate(90deg);
 	        transform: rotate(90deg);
 }
-
