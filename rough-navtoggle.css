@@ -3,76 +3,74 @@
 	by Oskar Rough Mosumgaard
 	- use it as you like
 */
-/* reset the list */
-.navigation,
-.navigation ul {
+.nav,
+.nav ul {
   padding: 0;
   list-style: none; }
 
-.navigation {
+.navToggle {
   -webkit-transition: all 150ms;
   -moz-transition: all 150ms;
   -ms-transition: all 150ms;
-  -o-transition: all 150ms;
-  transition: all 150ms;
-  -webkit-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover; }
+  transition: all 150ms; }
   @media screen and (max-width: 39.93333em) {
-    .navigation {
+    .navToggle {
       max-height: 0;
       overflow: hidden;
       text-align: center;
       background-color: #f2f2f2; }
-      .navigation li {
+      .navToggle li {
         margin: 1em 0; }
-      .navigation a {
+      .navToggle a {
         margin-right: auto; } }
-  .navigation.is-active {
+  .navToggle.is-active {
     max-height: 999px; }
 
 /* Navigation toggle button */
-.navigation-toggle-button {
+.navToggleBtn {
   float: right;
   cursor: pointer;
-  /* Hide when screen is wide enough and for IE8 (no mq support) */ }
-  .navigation-toggle-button:hover .navigation-toggle-button__text {
-    text-decoration: underline; }
-  .navigation-toggle-button:hover .navigation-toggle-button__box {
-    background-color: #cc0000; }
+  /* Hide when screen is wide enough and for IE8 (no mq support) */
+  /* Hover effect */ }
   @media screen and (min-width: 40em) {
-    .navigation-toggle-button {
+    .navToggleBtn {
       display: none; } }
-  .lt-ie9 .navigation-toggle-button {
+  .lt-ie9 .navToggleBtn {
     display: none; }
+  .navToggleBtn:hover .navToggleBtn-text {
+    text-decoration: underline; }
+  .navToggleBtn:hover .navToggleBtn-box {
+    background-color: #cc0000; }
 
-.navigation-toggle-button__text {
+.navToggleBtn-text {
   position: relative;
   top: -0.6em;
   margin-right: 0.13333em;
   color: red; }
 
-.navigation-toggle-button__box {
+.navToggleBtn-box {
   display: inline-block;
   font-size: 16px;
   padding: 0.625em;
   background-color: red;
   cursor: pointer; }
 
-.navigation-toggle-button__icon {
-  -webkit-transition: all 200ms;
-  -moz-transition: all 200ms;
-  -ms-transition: all 200ms;
-  -o-transition: all 200ms;
-  transition: all 200ms;
+.navToggleBtn-icon {
+  box-sizing: content-box;
+  -moz-box-sizing: content-box;
   float: right;
   width: 1em;
   height: 0.125em;
   border-top: 0.375em double white;
-  border-bottom: 0.125em solid white; }
+  border-bottom: 0.125em solid white;
+  -webkit-transition: all 200ms;
+  -moz-transition: all 200ms;
+  -ms-transition: all 200ms;
+  -o-transition: all 200ms;
+  transition: all 200ms; }
 
 /* Navigation toggle active state */
-.navigation-toggle-button.is-active .navigation-toggle-button__icon {
+.navToggleBtn.is-active .navToggleBtn-icon {
   -webkit-transform: rotate(90deg);
   -moz-transform: rotate(90deg);
   -ms-transform: rotate(90deg);

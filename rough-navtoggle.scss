@@ -4,34 +4,28 @@
 	- use it as you like
 */
 
-/* reset the list */
-.navigation,
-.navigation ul { padding: 0; list-style: none; }
-
-
-
 // Where to change into toggle
-$navigation-toggle-breakpoint: (600/15)*1em;
-$navigation-primary-breakpoint: (599/15)*1em;
-
+$nav-toggle-breakpoint: (600/15)*1em;
+$nav-primary-breakpoint: (599/15)*1em;
 // Size of the toggle button
-$navigation-toggle-size: 2;
-
+$nav-toggle-size: 2;
 // Color
 $toggle-color: red;
 $toggle-line-color: #fff;
 
+// reset the list
+.nav,
+.nav ul { padding: 0; list-style: none; }
 
-.navigation {
-	//@include transition(all 150ms);
+
+.navToggle {
 	-webkit-transition: all 150ms;
 	   -moz-transition: all 150ms;
 	    -ms-transition: all 150ms;
-	     -o-transition: all 150ms;
 	        transition: all 150ms;
 
 	// Hide when too small
-	@media screen and (max-width: $navigation-primary-breakpoint) {
+	@media screen and (max-width: $nav-primary-breakpoint) {
 		max-height: 0;
 		overflow: hidden;
 		text-align: center;
@@ -52,47 +46,48 @@ $toggle-line-color: #fff;
 }
 
 /* Navigation toggle button */
-.navigation-toggle-button {
+.navToggleBtn {
 	float: right;
 	cursor: pointer;
 	
-	&:hover {
-		.navigation-toggle-button__text {
-			text-decoration: underline;
-		}
-		.navigation-toggle-button__box {
-			background-color: darken($toggle-color,10%);
-		}
-	}
 	/* Hide when screen is wide enough and for IE8 (no mq support) */
-	@media screen and (min-width: $navigation-toggle-breakpoint) {
+	@media screen and (min-width: $nav-toggle-breakpoint) {
 		display: none;
 	}
 	.lt-ie9 & {
 		display: none;
 	}
+	/* Hover effect */
+	&:hover {
+		.navToggleBtn-text {
+			text-decoration: underline;
+		}
+		.navToggleBtn-box {
+			background-color: darken($toggle-color,10%);
+		}
+	}
 }
-.navigation-toggle-button__text {
+.navToggleBtn-text {
 	position: relative;
 	top: (9/15)*-1em;
 	margin-right: (2/15)*1em;
 	color: $toggle-color;
 }
-.navigation-toggle-button__box {
+.navToggleBtn-box {
   	display: inline-block;
   	font-size: 16px;
 	padding: (10 / 16) * 1em;
 	background-color: $toggle-color;
 	cursor: pointer;
 }
-.navigation-toggle-button__icon {
+.navToggleBtn-icon {
 	box-sizing: content-box;
 	-moz-box-sizing: content-box;
 	float: right;
 	width: 1em;
-	height: ($navigation-toggle-size / 16) * 1em;
-	border-top: (($navigation-toggle-size * 3) / 16) * 1em double $toggle-line-color;
-	border-bottom: ($navigation-toggle-size / 16) * 1em solid $toggle-line-color;
+	height: ($nav-toggle-size / 16) * 1em;
+	border-top: (($nav-toggle-size * 3) / 16) * 1em double $toggle-line-color;
+	border-bottom: ($nav-toggle-size / 16) * 1em solid $toggle-line-color;
 	-webkit-transition: all 200ms;
 	   -moz-transition: all 200ms;
 	    -ms-transition: all 200ms;
@@ -101,7 +96,7 @@ $toggle-line-color: #fff;
 }
 
 /* Navigation toggle active state */
-.navigation-toggle-button.is-active .navigation-toggle-button__icon {
+.navToggleBtn.is-active .navToggleBtn-icon {
 	//@include transform(rotate(90deg));
 	-webkit-transform: rotate(90deg);
 	   -moz-transform: rotate(90deg);

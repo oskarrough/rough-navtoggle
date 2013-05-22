@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="rough-navtoggle.css">
+	<title>Rough: NavToggle</title>
+</head>
+<body>
+
+	<ul id="js-roughNavToggle" class="nav navToggle">
+		<li><a href="#">Link</a></li>
+		<li><a href="#">Link</a></li>
+		<li><a href="#">Link</a></li>
+	</ul>
+
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script src="rough-navtoggle.js"></script>
+	<script>
+		$(function(){
+			// Add toggles
+			$('#js-roughNavToggle').roughNavToggle();
+		});
+	</script>
+
+</body>
+</html>

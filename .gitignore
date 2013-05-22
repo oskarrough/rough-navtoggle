@@ -12,7 +12,6 @@
 
 # OS or Editor folders
 .DS_Store
-._.DS_Store
 Thumbs.db
 .cache
 .project
@@ -23,19 +22,8 @@ nbproject
 *.sublime-project
 *.sublime-workspace
 
-# Dreamweaver added files
-_notes
-dwsync.xml
-
-# Komodo
-*.komodoproject
-.komodotools
-
 # Folders to ignore
 .hg
 .svn
 .CVS
-intermediate
-publish
-.idea
 components
