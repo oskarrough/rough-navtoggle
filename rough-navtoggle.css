@@ -3,76 +3,61 @@
 	by Oskar Rough Mosumgaard
 	- use it as you like
 */
-.nav,
-.nav ul {
-  padding: 0;
+.Nav {
+  padding-left: 0;
   list-style: none; }
 
-.navToggle {
-  -webkit-transition: all 150ms;
-  -moz-transition: all 150ms;
-  -ms-transition: all 150ms;
-  transition: all 150ms; }
-  @media screen and (max-width: 39.93333em) {
-    .navToggle {
+.Nav--togglable {
+  display: block;
+  -webkit-transition: all 200ms;
+  -moz-transition: all 200ms;
+  transition: all 200ms; }
+  @media (max-width: 37.5em) {
+    .Nav--togglable {
       max-height: 0;
       overflow: hidden;
-      text-align: center;
-      background-color: #f2f2f2; }
-      .navToggle li {
-        margin: 1em 0; }
-      .navToggle a {
-        margin-right: auto; } }
-  .navToggle.is-active {
+      background-color: #f2f2f2; } }
+  .Nav--togglable.is-active {
     max-height: 999px; }
 
-/* Navigation toggle button */
-.navToggleBtn {
-  float: right;
+.NavToggle {
   cursor: pointer;
-  /* Hide when screen is wide enough and for IE8 (no mq support) */
-  /* Hover effect */ }
-  @media screen and (min-width: 40em) {
-    .navToggleBtn {
-      display: none; } }
-  .lt-ie9 .navToggleBtn {
-    display: none; }
-  .navToggleBtn:hover .navToggleBtn-text {
+  display: none; }
+  @media (max-width: 37.5em) {
+    .NavToggle {
+      display: block; } }
+  .NavToggle:hover .NavToggle-text {
     text-decoration: underline; }
-  .navToggleBtn:hover .navToggleBtn-box {
+  .NavToggle:hover .NavToggle-box {
     background-color: #cc0000; }
 
-.navToggleBtn-text {
+.NavToggle-text {
   position: relative;
-  top: -0.6em;
-  margin-right: 0.13333em;
+  top: -0.5625em;
+  margin-right: 0.125em;
   color: red; }
 
-.navToggleBtn-box {
+.NavToggle-box {
   display: inline-block;
   font-size: 16px;
   padding: 0.625em;
   background-color: red;
   cursor: pointer; }
 
-.navToggleBtn-icon {
+.NavToggle-icon {
   box-sizing: content-box;
   -moz-box-sizing: content-box;
-  float: right;
+  display: block;
   width: 1em;
   height: 0.125em;
   border-top: 0.375em double white;
   border-bottom: 0.125em solid white;
   -webkit-transition: all 200ms;
   -moz-transition: all 200ms;
-  -ms-transition: all 200ms;
-  -o-transition: all 200ms;
   transition: all 200ms; }
 
 /* Navigation toggle active state */
-.navToggleBtn.is-active .navToggleBtn-icon {
+.NavToggle.is-active .NavToggle-icon {
   -webkit-transform: rotate(90deg);
   -moz-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  -o-transform: rotate(90deg);
   transform: rotate(90deg); }

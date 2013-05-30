@@ -28,9 +28,9 @@
 			
 			// Insert button markup before the nav
 			var navToggleHTML = [
-			 '<div class="navToggleBtn">',
-			 	'<span class="navToggleBtn-text">Menu</span> ',
-			 	'<span class="navToggleBtn-box"><i class="navToggleBtn-icon"></i></span>',
+			 '<div class="NavToggle">',
+			 	'<span class="NavToggle-text">Menu</span> ',
+			 	'<span class="NavToggle-box"><i class="NavToggle-icon"></i></span>',
 			 '</div>'].join("\n");
 			this.$el.before(navToggleHTML);
 		},
@@ -39,7 +39,7 @@
 			var _this = this;
 
 			// Toggle on click
-			this.$el.prev('.navToggleBtn').bind('click', _this.toggle);
+			this.$el.prev('.NavToggle').bind('click', _this.toggle);
 		},
 
 		toggle: function(element){
