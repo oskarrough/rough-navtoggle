@@ -1,6 +1,6 @@
 {
     "name": "rough-navtoggle",
-    "version": "0.2.0",
+    "version": "0.3.0",
     "author": "Oskar Rough Mosumgaard",
     "description": "Toggle a navigation with a button (useful for small screens)",
     "main": [
@@ -10,6 +10,6 @@
         "navigation-toggle.js"
     ],
     "dependencies": {
-        "jquery": "*"
+        "jquery": "2.0"
     }
 }

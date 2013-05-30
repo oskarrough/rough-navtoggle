@@ -8,9 +8,13 @@ For smaller screens you might want to hide your navigation behind a "Menu" butto
 * Git: `git clone https://github.com/oskarrough/rough-navtoggle.git`
 
 ## Get started
-1. Reference jquery and rough-navtoggle.js: `<script src="http://code.jquery.com/jquery-2.0.0.min.js"></script><script src="rough-navtoggle.js"></script>`
-2. Reference rough-navtoggle.css: `<link rel="stylesheet" href="rough-navtoggle.css">`
+1. Reference jQuery and `<script src="rough-navtoggle.js"></script>`
+2. Reference `<link rel="stylesheet" href="rough-navtoggle.css">`
 3. You will need a container with the class: `NavToggle`
+
+## How does it work?
+The script will automatically insert a styled button (to toggle the navigation) just before the navigation it self.
+When the screen is small enough (decided by a mediaquery in the CSS) the nav will hide and the button will appear.
 
 ## Tips
 * Compile the scss using `sass --watch rough-navtoggle.scss:rough-navtoggle.css`
