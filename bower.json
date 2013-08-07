@@ -10,6 +10,6 @@
         "navigation-toggle.js"
     ],
     "dependencies": {
-        "jquery": "2.0"
+        "jquery": "~1.10.2"
     }
 }

@@ -11,6 +11,7 @@ For smaller screens you might want to hide your navigation behind a "Menu" butto
 1. Reference jQuery and `<script src="rough-navtoggle.js"></script>`
 2. Reference `<link rel="stylesheet" href="rough-navtoggle.css">`
 3. You will need a container with the class: `NavToggle`
+4. Call the plugin using using `$('.Nav--togglable').roughNavToggle();`
 
 ## How does it work?
 The script will automatically insert a styled button (to toggle the navigation) just before the navigation it self.
