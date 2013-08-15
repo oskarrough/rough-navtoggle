@@ -18,20 +18,20 @@
 
 		init: function() {
 			var _this = this;
-			
+
 			_this.insertButton();
 			_this.bindClick();
 		},
 
 		insertButton: function(element){
 			var _this = this;
-			
+
 			// Insert button markup before the nav
 			var navToggleHTML = [
-			 '<div class="NavToggle">',
-			 	'<span class="NavToggle-text">Menu</span> ',
-			 	'<span class="NavToggle-box"><i class="NavToggle-icon"></i></span>',
-			 '</div>'].join("\n");
+			'<div class="NavToggle">',
+				'<span class="NavToggle-text">Menu</span> ',
+				'<span class="NavToggle-box"><i class="NavToggle-icon"></i></span>',
+			'</div>'].join("\n");
 			this.$el.before(navToggleHTML);
 		},
 
@@ -43,8 +43,6 @@
 		},
 
 		toggle: function(element){
-
-
 			// toggle button
 			$(this).toggleClass('is-active');
 			// toggle navigation
@@ -62,6 +60,9 @@
 				rev.init();
 				$(this).data('roughNavToggle', rev);
 			});
+		} else {
+			// make sure log doesn't break IE
+			window.console && console.log('rough navtoggle: no toggles found');
 		}
 	};
 })(jQuery);
