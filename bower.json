@@ -1,15 +1,16 @@
 {
-    "name": "rough-navtoggle",
-    "version": "0.3.0",
-    "author": "Oskar Rough Mosumgaard",
-    "description": "Toggle a navigation with a button (useful for small screens)",
-    "main": [
-        "navigation-toggle.html",
-        "navigation-toggle.scss",
-        "navigation-toggle.css",
-        "navigation-toggle.js"
-    ],
-    "dependencies": {
-        "jquery": "~1.10.2"
-    }
+  "name": "rough-navtoggle",
+  "version": "0.4.0",
+  "author": "Oskar Rough Mosumgaard",
+  "description": "Toggle a navigation with a button (useful for small screens)",
+  "main": [
+    "navigation-toggle.html",
+    "navigation-toggle.scss",
+    "navigation-toggle.css",
+    "navigation-toggle.js"
+  ],
+  "dependencies": {
+    "jquery": "~1.10.2"
+  },
+  "devDependencies": {}
 }
