@@ -4,6 +4,7 @@
 
 		//Defaults:
 		this.defaults = {
+			activeClass: 'is-active'
 		};
 
 		//Extending options:
@@ -20,7 +21,7 @@
 			var _this = this;
 
 			_this.insertButton();
-			_this.bindClick();
+			_this.events();
 		},
 
 		insertButton: function(element){
@@ -32,19 +33,22 @@
 				'<span class="NavToggle-text">Menu</span> ',
 				'<span class="NavToggle-box"><i class="NavToggle-icon"></i></span>',
 			'</div>'].join("\n");
+
 			this.$el.before(navToggleHTML);
 		},
 
-		bindClick: function(element){
+		events: function(element){
 			var _this = this;
 
-			// Toggle on click
+			// Toggle the navigation on click
 			this.$el.prev('.NavToggle').bind('click', _this.toggle);
 		},
 
 		toggle: function(element){
+
 			// toggle button
 			$(this).toggleClass('is-active');
+
 			// toggle navigation
 			// for some reason this.$el is not defined here, so we use next until I fix it
 			$(this).next().toggleClass('is-active');
