@@ -7,18 +7,24 @@
 </head>
 <body>
 
-	<ul class="Nav Nav--togglable">
-		<li><a href="#">Make the</a></li>
-		<li><a href="#">browser window</a></li>
-		<li><a href="#">smaller</a></li>
+	<button class="js-toggle" data-closeOutside="true" data-target="#hello">toggle!!</button>
+	<p id="hello">Make the browser window smaller to see the menu button.</p>
+
+	<ul class="js-roughNavToggle">
+		<li><a href="#">Link</a></li>
+		<li><a href="#">Link again</a></li>
+		<li><a href="#">Another link</a></li>
 	</ul>
 
 	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 	<script src="rough-navtoggle.js"></script>
+	<script src="rough-toggle.js"></script>
 	<script>
 		$(function(){
 			// Add toggles
-			$('.Nav--togglable').roughNavToggle();
+			$('.js-roughNavToggle').roughNavToggle();
+
+			$('.js-toggle').roughToggle();
 		});
 	</script>
 

@@ -1,60 +1,61 @@
-/*
+/*!
 	Rough Navigation Toggle
 	by Oskar Rough Mosumgaard
 	- use it as you like
 */
-.Nav {
-  padding-left: 0;
-  list-style: none; }
-
-.Nav--togglable {
-  display: block;
-  -webkit-transition: all 200ms;
-  -moz-transition: all 200ms;
-  transition: all 200ms; }
-  @media (max-width: 37.5em) {
-    .Nav--togglable {
-      max-height: 0;
-      overflow: hidden;
-      background-color: #f2f2f2; } }
-  .Nav--togglable.is-active {
-    max-height: 999px; }
+.js-roughNavToggle.is-active {
+  display: block; }
+@media (max-width: 600px) {
+  .js-roughNavToggle {
+    display: none; } }
 
 .NavToggle {
-  cursor: pointer;
   display: none; }
-  @media (max-width: 37.5em) {
+  @media (max-width: 600px) {
     .NavToggle {
       display: block; } }
-  .NavToggle:hover .NavToggle-text {
+
+.NavToggle {
+  background-color: transparent;
+  font-size: 16px;
+  border: 1px solid;
+  border-radius: 2px;
+  padding: 0;
+  margin: 0;
+  line-height: 1;
+  cursor: pointer; }
+  .NavToggle:hover, .NavToggle:focus {
+    outline: none; }
+  .NavToggle:hover .NavToggle-label {
     text-decoration: underline; }
   .NavToggle:hover .NavToggle-box {
-    background-color: #cc0000; }
+    background-color: #f50000; }
 
-.NavToggle-text {
+.NavToggle-label {
   position: relative;
-  top: -0.5625em;
-  margin-right: 0.125em;
+  font-size: 14px;
+  top: 0.45em;
+  margin-left: 0.4em;
+  margin-right: 0.4em;
   color: red; }
 
 .NavToggle-box {
-  display: inline-block;
+  float: right;
   font-size: 16px;
   padding: 0.625em;
-  background-color: red;
-  cursor: pointer; }
+  background-color: red; }
 
 .NavToggle-icon {
-  box-sizing: content-box;
   -moz-box-sizing: content-box;
+  box-sizing: content-box;
   display: block;
   width: 1em;
   height: 0.125em;
   border-top: 0.375em double white;
   border-bottom: 0.125em solid white;
-  -webkit-transition: all 200ms;
-  -moz-transition: all 200ms;
-  transition: all 200ms; }
+  -webkit-transition: all 150ms;
+  -moz-transition: all 150ms;
+  transition: all 150ms; }
 
 /* Navigation toggle active state */
 .NavToggle.is-active .NavToggle-icon {

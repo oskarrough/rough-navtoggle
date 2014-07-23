@@ -4,93 +4,78 @@
 	- use it as you like
 */
 
+$rough-breakpoint: 600px;
+$rough-toggle-size: 2;
+$rough-bg-color: red;
+$rough-line-color: white;
 
-// Reset the navigation
-.Nav {
-	padding-left: 0;
-	list-style: none;
-}
-
-
-// Where to change into toggle
-$nav-primary-breakpoint: (600/16)*1em;
-// Size of the toggle button
-$toggle-size: 2;
-$toggle-color1: red; // Background-color of the button
-$toggle-color2: #fff; // Color of the lines
-
-.Nav--togglable {
-	display: block;
-	
-	// animate the toggle
-	-webkit-transition: all 200ms;
-	   -moz-transition: all 200ms;
-	        transition: all 200ms;
-	
-	// Use desktop first media-queries to avoid browsertrouble
-	// When small enough, hide the navigation
-	@media (max-width: $nav-primary-breakpoint) {
-		max-height: 0;
-		overflow: hidden;
-		background-color: #f2f2f2;
-	}
-
-	
-	// show when activated with js
+.js-roughNavToggle {
 	&.is-active {
-		max-height: 999px;
+		display: block;
+	}
+	@media (max-width: $rough-breakpoint) {
+		display: none;
+	}
+}
+.NavToggle {
+	display: none;
+	@media (max-width: $rough-breakpoint) {
+		display: block;
 	}
 }
 
 
 // The button that toggles the navigation
 .NavToggle {
-	
-	// Make sure the text area also gets a pointer
+	background-color: transparent;
+	font-size: 16px;
+	border: 1px solid;
+	border-radius: 2px;
+	padding: 0;
+	margin: 0;
+	line-height: 1;
 	cursor: pointer;
-	
-	// Show when screen is small enough
-	display: none;
-	@media (max-width: $nav-primary-breakpoint) {
-		display: block;
-	}
-	
+
 	// Hover effect
+	&:hover,
+	&:focus {
+		outline: none;
+	}
 	&:hover {
-		.NavToggle-text {
+		.NavToggle-label {
 			text-decoration: underline;
 		}
 		.NavToggle-box {
-			background-color: darken($toggle-color1,10%);
+			background-color: darken($rough-bg-color,2%);
 		}
 	}
 }
-.NavToggle-text {
+.NavToggle-label {
 	position: relative;
-	top: (9/16) *-1em;
-	margin-right: (2/16) *1em;
-	color: $toggle-color1;
+	font-size: 14px;
+	top: 0.45em;
+	margin-left: 0.4em;
+	margin-right: 0.4em;
+	color: $rough-bg-color;
 }
 .NavToggle-box {
-  	display: inline-block;
+  	float: right;
   	font-size: 16px;
 	padding: (10/16) *1em;
-	background-color: $toggle-color1;
-	cursor: pointer;
+	background-color: $rough-bg-color;
 }
 .NavToggle-icon {
 	// we're using content-box for the calculations here to be correct
-	box-sizing: content-box;
 	-moz-box-sizing: content-box;
+	box-sizing: content-box;
 	display: block;
-	
 	width: 1em;
-	height: ($toggle-size / 16) *1em;
-	border-top: (($toggle-size * 3) / 16) *1em double $toggle-color2;
-	border-bottom: ($toggle-size / 16) *1em solid $toggle-color2;
-	-webkit-transition: all 200ms;
-	   -moz-transition: all 200ms;
-	        transition: all 200ms;
+	height: ($rough-toggle-size / 16) *1em;
+	border-top: (($rough-toggle-size * 3) / 16) *1em double $rough-line-color;
+	border-bottom: ($rough-toggle-size / 16) *1em solid $rough-line-color;
+	-webkit-transition: all 150ms;
+	   -moz-transition: all 150ms;
+	        transition: all 150ms;
 }
 
 /* Navigation toggle active state */

@@ -4,7 +4,8 @@
 
 		//Defaults:
 		this.defaults = {
-			activeClass: 'is-active'
+			activeClass: 'is-active',
+			label: 'Menu'
 		};
 
 		//Extending options:
@@ -12,6 +13,7 @@
 
 		//Privates:
 		this.$el = $(el);
+		this.$toggle = null;
 	}
 
 	// Separate functionality from object creation
@@ -24,49 +26,45 @@
 			_this.events();
 		},
 
-		insertButton: function(element){
-			var _this = this;
-
-			// Insert button markup before the nav
-			var navToggleHTML = [
-			'<div class="NavToggle">',
-				'<span class="NavToggle-text">Menu</span> ',
-				'<span class="NavToggle-box"><i class="NavToggle-icon"></i></span>',
-			'</div>'].join("\n");
-
-			this.$el.before(navToggleHTML);
-		},
-
 		events: function(element){
-			var _this = this;
+			var self = this;
 
 			// Toggle the navigation on click
-			this.$el.prev('.NavToggle').bind('click', _this.toggle);
+			this.$el.prev('.NavToggle').on('click', $.proxy(this.toggle, this));
 		},
 
-		toggle: function(element){
+		insertButton: function(element){
+
+			// Insert button markup before the nav
+			var navToggleMarkup = [
+			'<button class="NavToggle">',
+				'<span class="NavToggle-box"><i class="NavToggle-icon"></i></span>',
+				'<span class="NavToggle-label">'+this.opts.label+'</span> ',
+			'</button>'].join("\n");
+
+			this.$toggle = $(navToggleMarkup);
+			this.$el.before(this.$toggle);
+		},
+
+		toggle: function(event){
 
 			// toggle button
-			$(this).toggleClass('is-active');
+			this.$toggle.toggleClass('is-active');
 
 			// toggle navigation
-			// for some reason this.$el is not defined here, so we use next until I fix it
-			$(this).next().toggleClass('is-active');
+			this.$el.toggleClass('is-active');
 		}
 
 	};
 
 	// The actual plugin
 	$.fn.roughNavToggle = function(options) {
-		if(this.length) {
+		if (this.length) {
 			this.each(function() {
 				var rev = new RoughNavToggle(this, options);
 				rev.init();
 				$(this).data('roughNavToggle', rev);
 			});
-		} else {
-			// make sure log doesn't break IE
-			window.console && console.log('rough navtoggle: no toggles found');
 		}
 	};
 })(jQuery);
