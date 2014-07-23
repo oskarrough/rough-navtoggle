@@ -1,6 +1,6 @@
 {
   "name": "rough-navtoggle",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "author": "Oskar Rough Mosumgaard",
   "description": "Toggle a navigation with a button (useful for small screens)",
   "main": [
